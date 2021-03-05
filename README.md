@@ -1,1 +1,1 @@
-Java labs on one project
+Java labs in one project
