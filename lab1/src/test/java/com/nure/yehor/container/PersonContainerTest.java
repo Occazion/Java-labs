@@ -7,7 +7,7 @@ import org.junit.Test;
 public class PersonContainerTest {
 
     @Test
-    public void demo() {
+    public void print_shouldPrintNamesInAlphabeticalOrder_whenCallingPrint() {
         PersonContainer container = new PersonContainer();
         container.add(new Teacher("Abu"));
         container.add(new Student("Nike"));
