@@ -1,0 +1,25 @@
+create table components
+(
+	id int auto_increment
+		primary key,
+	type enum('none', 'motherboard', 'GPU', 'CPU', 'RAM', 'harddrive') default 'none' null,
+	price int not null,
+	name varchar(64) not null,
+	constraint components_name_uindex
+		unique (name)
+);
+
+create table configuration
+(
+	id int auto_increment
+		primary key,
+	name varchar(64) not null,
+	c_1 int default 0 not null,
+	c_2 int default 0 not null,
+	c_3 int default 0 not null,
+	c_4 int default 0 not null,
+	c_5 int default 0 not null,
+	constraint configuration_name_uindex
+		unique (name)
+);
+
