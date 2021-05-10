@@ -1,6 +1,7 @@
 package com.nure.yehor.container;
 
 import com.nure.yehor.entity.Person;
+
 import java.util.Collection;
 import java.util.Map;
 import java.util.TreeMap;
@@ -11,7 +12,6 @@ public class PersonContainer {
 
     public PersonContainer() {
     }
-
 
     public PersonContainer(Collection<Person> persons) {
         persons.forEach(p -> this.persons.put(p.getName(), p));
