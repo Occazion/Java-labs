@@ -5,8 +5,7 @@
 <head>
 </head>
 <body>
-<h2><%= request.getAttribute("message") %>
-</h2>
+<h2>${message}</h2>
 <form action="/home" method="post">
     <select name="country" required>
         <option disabled>Выберите страну:</option>
