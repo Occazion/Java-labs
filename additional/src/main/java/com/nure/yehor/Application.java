@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Application {
 
-    private Map<String, String> regex;
+    private final Map<String, String> regex;
 
     public Application() {
         regex = new LinkedHashMap<>();

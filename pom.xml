@@ -11,7 +11,9 @@
   <modules>
     <module>lab1</module>
     <module>lab2</module>
+    <module>lab2-spring</module>
     <module>additional</module>
+    <module>lab3</module>
   </modules>
 
   <properties>
