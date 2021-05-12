@@ -17,9 +17,9 @@ public class Application {
 
     public void process(String path, String resultFilename) {
         List<String> newLines = fileToStream(path)
-                .peek(s -> s = s.replaceAll("^public class $", "PUBLIC CLASS "))
-                .peek(s -> s = s.replaceAll("^public $", "protected "))
-                .peek(s -> s = s.replaceAll("^PUBLIC CLASS $", "public class "))
+                .map(s -> s = s.replace("public class ", "PUBLIC CLASS "))
+                .map(s -> s = s.replace("public ", "protected "))
+                .map(s -> s = s.replace("PUBLIC CLASS ", "public class "))
                 .collect(Collectors.toList());
         writeToFile(newLines, resultFilename);
     }
