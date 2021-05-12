@@ -1,11 +1,3 @@
-package com.nure.yehor;
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 public class Application {
 
     private final Map<String, String> regex;
@@ -17,11 +9,6 @@ public class Application {
         regex.put("int", "^-?\\d+$");
         regex.put("float", "^-?\\d+\\.\\d+$");
         regex.put("string", "\\w{2,}");
-    }
-
-    public static void main(String[] args) {
-        Application app = new Application();
-        app.open("additional/test.txt", true);
     }
 
     public void open(String filepath, boolean append) {

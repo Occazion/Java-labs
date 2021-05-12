@@ -28,7 +28,9 @@ public class ConfigurationMapper implements Mapper<Configuration> {
     public Configuration mapOne(ResultSet rs) {
         try {
             if (rs.next()) {
-                return mapConfiguration(rs);
+                Configuration configuration = mapConfiguration(rs);
+                configuration = findComponents(configuration);
+                return configuration;
             }
         } catch (SQLException e) {
             log.error("Error: " + e);

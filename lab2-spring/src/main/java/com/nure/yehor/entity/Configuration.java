@@ -29,7 +29,11 @@ public class Configuration {
         sb.append(" c3=").append(c3);
         sb.append(" c4=").append(c4);
         sb.append(" c5=").append(c5);
-        sb.append(" list:").append(componentList);
+        if (!componentList.isEmpty()) {
+            sb.append(" list:")
+                    .append(System.lineSeparator())
+                    .append(componentList);
+        }
         sb.append(System.lineSeparator());
         return sb.toString();
     }
